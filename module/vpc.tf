@@ -41,8 +41,7 @@ resource "aws_subnet" "public-subnet" {
     "kubernetes.io/role/elb"                      = "1"
   }
 
-  depends_on = [aws_vpc.vpc,
-  ]
+  depends_on = [aws_vpc.vpc]
 }
 
 resource "aws_subnet" "private-subnet" {
